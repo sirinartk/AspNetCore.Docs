@@ -5,7 +5,7 @@ description: Learn how to invoke JavaScript functions from .NET and .NET methods
 monikerRange: '>= aspnetcore-3.0'
 ms.author: riande
 ms.custom: mvc
-ms.date: 05/21/2019
+ms.date: 04/25/2019
 uid: blazor/javascript-interop
 ---
 # Blazor JavaScript interop
@@ -119,7 +119,7 @@ The following example shows capturing a reference to the `username` `<input>` el
 ```
 
 > [!NOTE]
-> Do **not** use captured element references as a way of populating or manipulating the DOM if Blazor interacts with the elements that are referenced. Doing so may interfere with the declarative rendering model.
+> Do **not** use captured element references as a way of populating the DOM. Doing so may interfere with the declarative rendering model.
 
 As far as .NET code is concerned, an `ElementRef` is an opaque handle. The *only* thing you can do with `ElementRef` is pass it through to JavaScript code via JavaScript interop. When you do so, the JavaScript-side code receives an `HTMLElement` instance, which it can use with normal DOM APIs.
 
